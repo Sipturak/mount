@@ -6,16 +6,16 @@ import CarouselComponent from './components/carousel/CarouselComponent';
 import CardComponent from './components/cards/CardComponent';
 import css_cards from './CSS/css_cards.css'
 import aboutUs from './CSS/aboutUs.css'
-import {motion} from 'framer-motion'
+
 import AboutUsComponent from './components/about_us/AboutUsComponent';
+import header from './CSS/header.css'
+import { HeaderComponent } from './components/header/HeaderComponent';
 function App() {
   return (
     <React.Fragment>
-      <NavComponent/>
-      <CarouselComponent/>
+      <HeaderComponent />
       <div className = "container-fluid">
         <CardComponent/>
-        <br/>
       </div>
       <AboutUsComponent/>
     </React.Fragment>
