@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
     },
     appBarSolid: {
         transition: 'all 0.3s ease',
-        backgroundColor: 'rgba(255, 255, 255 ,0.5)',
+        backgroundColor: 'rgba(255, 255, 255 ,0.3)',
     },
     appBarTransparent: {
         transition: 'all 0.3s ease',
-        backgroundColor: 'rgba(255, 255, 255)'
+        backgroundColor: '#2c3e50'
     }
 }));
 

@@ -16,8 +16,8 @@ h1{
     color: rgb(195, 205, 209);
   }
   .hero-image {
-    background-image: url(daniel_can.jpg);
-    background-color: #cccccc;
+    /* background-image: url(daniel_can.jpg); */
+    /* background-color: #cccccc; */
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;

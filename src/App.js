@@ -11,15 +11,18 @@ import header from './CSS/header.css'
 import { HeaderComponent } from './components/header/HeaderComponent';
 import {Route, Switch} from 'react-router-dom';
 import HomeComponent from './components/home/HomeComponent'
+import footer from './components/footer/footer.css'
+
+
 
 function App() {
   return (
     <React.Fragment>
       <NavComponent/>
-      <Switch>
-          <Route exact path="/" component={HomeComponent}/>
-          <Route exact path='/about' component={AboutUsComponent}/>
-      </Switch>
+        <Switch>
+            <Route exact path="/" component={HomeComponent}/>
+            <Route exact path='/about' component={AboutUsComponent}/>
+        </Switch>
     </React.Fragment>
   );
 }
