@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face{
+  font-family: 'Tjofson';
+  src: local('Tjofson'), url(./fonts/art-brewery/Art\ Brewery.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'Tjofsons';
+  src:local('Tjofsons'), url(./fonts/vonique-64/Vonique\ 64.ttf) format('truetype');
+}
