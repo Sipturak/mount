@@ -1,0 +1,31 @@
+.main-title{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    font-size: 45px;
+    padding-top: 250px;
+    font-family: 'chaparral-pro', 'liberation-serif', serif, Helvetica;
+}
+
+.main-text {
+    text-align: center;
+    font-family: 'chaparral-pro', 'liberation-serif', serif, Helvetica;
+    position: absolute;
+    overflow: visible;
+    top: 125%;
+    left: 50%;
+    width: 700px;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 300px;
+    display: block;
+    line-height: 33px;
+
+  }
+  
+  .info{
+      padding-bottom: 540px;
+  }

@@ -5,27 +5,37 @@ import { CardView } from './CardView'
 
 function CardComponent() {
     const [cards, setCards] = useState([{
+        id: 1,
         imgUrl:"images/hills.jpg",
         title:"Special title treatment", 
-        text:"With supporting text below as a natural lead-in to additional content."
+        text:"With supporting text below as a."
     },
     {
+        id: 2,
         imgUrl:"images/road.jpg",
         title:"Special title treatment",
-        text:"With supporting text below as a natural lead-in to additional content."
+        text:"With supporting text below as a."
     },
     {   
+        id: 3,
         imgUrl:"images/swing.jpg", 
         title:"Special title treatment", 
-        text:"With supporting text below as a natural lead-in to additional content."
+        text:"With supporting text below as a."
 
+    },
+    {
+        id: 4,
+        imgUrl:"images/hills.jpg",
+        title:"Special title treatment", 
+        text:"With supporting text below as a."
     }])
+
     return (
-        <div class = "all-cards">
-            <div class="row justify-content-center">
+        <div className = "all-cards">
+            <div className="row justify-content-center">
                 {
                     cards.map(card => {
-                       return <CardView key={card.imgUrl} imgUrl={card.imgUrl} 
+                       return <CardView key={card.id} imgUrl={card.imgUrl} 
                                         title={card.title} text={card.text}
                               />
                     })

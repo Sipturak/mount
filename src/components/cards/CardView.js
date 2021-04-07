@@ -1,22 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
 import {motion} from 'framer-motion'
 
+
+
 export const CardView = ({imgUrl,text,title}) => {
-    
+    const [hovered, setHovered] = useState(false)
+    const [initialText, setInitialText] = useState(true)
+    const mouseOver = () => {
+        setHovered(true)
+        setInitialText(false)
+    }
+    const mouseOut = () => {
+        console.log('mouse out')
+        
+        setHovered(false)
+        setInitialText(true)
+    }
     return (
-        <motion.div class="col-sm-4 col-xs-6" 
-                whileHover={{scale: 1.1}}
-                transition={{type: 'spring',stiffness: 300}}>
-                <div class="card text-center shadow">
-                    <div class="inner">
-                        <img src={imgUrl} class="card-img-top img-thumbnail img-responsive" alt="..."/>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{title}</h5>
-                        <p class="card-text">{text}</p>
-                        <a href="#" class="btn btn-success">Go somewhere</a>
-                    </div>
+        <div className="col-sm-3 col-xs-6">
+            <motion.div onMouseEnter={() => mouseOver()} onMouseLeave = {() => mouseOut()}
+                whileHover={{backgroundColor: 'rgba(0,0,0,0.9)', backgroundBlendMode: 'darken'}}
+                transition={{type: 'tween',duration: 0}}
+                className="card text-center shadow" style={{width: '17rem',height: '30rem',backgroundImage:`url(${imgUrl})`}}>
+                <div className="inner">
+                    {initialText ? <h3 className="card-title"> {title}</h3>: 
+                                   <h3 className="card-title-second"> {title}</h3>}
+                    {initialText ? <p className="card-desc"> {text}</p>: 
+                                   <p className="card-desc-second"> {text}</p>}
+                    {hovered ? <button className="btn btn-success" style={{position: 'relative',top:380,right:55}}>More</button> : null}
                 </div>
-        </motion.div> 
+            </motion.div>
+        </div>
     )
 }

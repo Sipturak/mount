@@ -1,10 +1,10 @@
-.container-fluid{
-    /* margin-top: 20%; */
+
+.all-cards{
+          /* top right bottom left */
+    padding: 10px 0px 10px 0px;
 }
 
-.card {
-    width: 95%;
-}
-.all-cards{
-    padding: 100px 50px 80px 100px;
+.h1-card{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
