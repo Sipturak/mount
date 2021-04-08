@@ -8,7 +8,7 @@ function CarouselComponent() {
            <Carousel fade >
                 
                 <Carousel.Item interval={1500} >
-                    <div style={{height: 600}}>
+                    <div className='main-picture'>
                         <img 
                         className="d-block w-100"
                         src="images/daniel_can.jpg"
@@ -20,7 +20,7 @@ function CarouselComponent() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={1500}>
-                    <div style={{height: 600}}>
+                    <div className='main-picture'>
                         <img 
                         className="d-block w-100"
                         src="images/stock-photo.jpg"
@@ -32,7 +32,7 @@ function CarouselComponent() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={1500}>
-                    <div style={{height: 600}}>
+                    <div className='main-picture'>
                         <img
                         className="d-block w-100"
                         src="images/ultrawide-moraine-lake.jpg"

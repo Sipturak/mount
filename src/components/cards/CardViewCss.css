@@ -1,0 +1,41 @@
+.card-desc {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    overflow: visible;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .card-desc-second {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    overflow: visible;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .card-title {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    overflow: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .card-title-second {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    overflow: visible;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
