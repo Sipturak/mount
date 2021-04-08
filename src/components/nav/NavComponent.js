@@ -58,43 +58,4 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-
-function NavComponent() {
-    
-    const classes = useStyles();
-
-    const [navBackground, setNavBackground] = useState('appBarTransparent')
-    const navRef = React.useRef()
-    navRef.current = navBackground
-    useEffect(() => {
-        const handleScroll = () => {
-            const show = window.scrollY > 50
-            if (show) {
-                setNavBackground('appBarSolid')
-            } else {
-                setNavBackground('appBarTransparent')
-            }
-        }
-        document.addEventListener('scroll', handleScroll)
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
-
-    return (   
-        <>
-            <AppBar className={classes[navRef.current]} position='fixed'>
-                <MaterialToolbar className={classes.toolbarAlignment}>
-                    <Typography className={classes.navigationlinksTitle} color='secondary'>Mountain Climbing Society</Typography>
-                    <Link className={classes.navigationlinks} href='/' color='secondary'>Home</Link>
-                    <FontAwesomeIcon className={classes.fontAwesomeS} style={{fontSize: 30, color: 'green'}} icon="grip-lines-vertical"></FontAwesomeIcon>
-                    <Link className={classes.navigationlinks} href='/about' color='secondary'>About</Link>
-                    <FontAwesomeIcon className={classes.fontAwesomeS} style={{fontSize: 30, color: 'green'}} icon="grip-lines-vertical"></FontAwesomeIcon>
-                    <Link className={classes.navigationlinks} href='/albums' color='secondary'>Albums</Link>
-                </MaterialToolbar>
-            </AppBar>
-        </>
-    )
-}
-
 export default NavComponent
