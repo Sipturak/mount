@@ -2,6 +2,7 @@ import React from 'react'
 
 function AboutUsComponent() {
     return (
+        <div className = "row">
         <div class="about">
             <div class="inner-section">
                 <h1>About Us</h1>
@@ -17,6 +18,7 @@ function AboutUsComponent() {
                     <button>Contact Us</button>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

@@ -15,16 +15,19 @@ import AboutUsComponent from './components/about_us/AboutUsComponent'
 import HomeComponent from './components/home/HomeComponent'
 import CardViewCss from './components/cards/CardViewCss.css'
 import InfoComponentCss from './components/header/InfoComponentCss.css'
+import footer from './components/footer/footer.css'
 library.add(faGripLinesVertical)
+
+
 
 function App() {
   return (
     <React.Fragment>
       <NavComponent/>
-      <Switch>
-          <Route exact path="/" component={HomeComponent}/>
-          <Route exact path='/about' component={AboutUsComponent}/>
-      </Switch>
+        <Switch>
+            <Route exact path="/" component={HomeComponent}/>
+            <Route exact path='/about' component={AboutUsComponent}/>
+        </Switch>
     </React.Fragment>
   );
 }
