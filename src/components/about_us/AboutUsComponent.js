@@ -3,10 +3,10 @@ import React from 'react'
 function AboutUsComponent() {
     return (
         <div className = "row">
-        <div class="about">
-            <div class="inner-section">
+        <div className="about">
+            <div className="inner-section">
                 <h1>About Us</h1>
-                <p class="text">
+                <p className="text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -14,7 +14,7 @@ function AboutUsComponent() {
                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
-                <div class="skills">
+                <div className="skills">
                     <button>Contact Us</button>
                 </div>
             </div>
