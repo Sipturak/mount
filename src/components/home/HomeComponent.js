@@ -13,7 +13,7 @@ const HomeComponent = (props) =>{
         <div style={{backgroundColor: 'white'}}>
             <HeaderComponent />
             <br/>
-            <div className = "container px-0">
+            <div className = "container px-4">
                 <InfoComponent />
                 <CardComponent/>
             </div>

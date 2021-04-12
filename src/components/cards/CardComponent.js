@@ -22,12 +22,6 @@ function CardComponent() {
         title:"Special title treatment", 
         text:"With supporting text below as a."
 
-    },
-    {
-        id: 4,
-        imgUrl:"images/hills.jpg",
-        title:"Special title treatment", 
-        text:"With supporting text below as a."
     }])
 
     return (
@@ -35,8 +29,7 @@ function CardComponent() {
             <div className="row justify-content-center">
                 {
                     cards.map(card => {
-                       return <CardView key={card.id} imgUrl={card.imgUrl} 
-                                        title={card.title} text={card.text}
+                       return <CardView key={card.id} {...card}
                               />
                     })
                 }
