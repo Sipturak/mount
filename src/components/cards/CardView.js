@@ -12,8 +12,6 @@ export const CardView = ({imgUrl,text,title}) => {
         setInitialText(false)
     }
     const mouseOut = () => {
-        console.log('mouse out')
-        
         setHovered(false)
         setInitialText(true)
     }
