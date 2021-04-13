@@ -1,13 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
-import Aos from "aos"
-import "aos/dist/aos.css"
 
 
 export const InfoComponent = () => {
-    useEffect(() => {
-        Aos.init({duration: 2000})
-        
-    }, [])
     return (
         <div className="info"  >
             <p className="main-title">Serbia is waiting for you to explore it.In your own way.Soon.</p>

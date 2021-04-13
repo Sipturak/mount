@@ -45,7 +45,7 @@ function CardComponent() {
     }, [])
     return (
         <Grid container>
-            <div data-aos="flip-left" className = "all-cards">
+            <div data-aos="flip-right" className = "all-cards">
                 <div className="row justify-content-center">
                     {
                         cards.map(card => {

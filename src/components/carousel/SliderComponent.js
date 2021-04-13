@@ -7,8 +7,7 @@ import Grid from '@material-ui/core/Grid'
 
 export const SliderComponent = () => {
     const [index, setIndex] = useState(0)
-    const [check, setCheck] = useState(false)
-    const slides = [
+    const  slides = [
         {
             id: 1,
             text: 'I love you the more in that I believe you had liked me for my own sake and for nothing else.',
@@ -28,21 +27,24 @@ export const SliderComponent = () => {
     const [item, setItem] = useState(slides[0])
     
     const plusSlides = (n) => {       
+        transitionSlide(()=>setIndex(++n))   
+    }
+
+    const minusSlides = (n) => {
+        transitionSlide(()=>setIndex(--n))   
+    }
+
+    const transitionSlide = (slideFunction) =>{
         const slideId = document.getElementById("slideId");
         slideId.style.opacity = 0
         slideId.style.transition = "opacity 500ms ease-in-out 0s"
         setTimeout(() => {
-            setIndex(++n)
+            slideFunction()
             slideId.style.opacity = 1
         }, 500);
-
-    }
-    const minusSlides = (n) => {
-        setIndex(--n)
     }
 
     useEffect(() => {
-        console.log(index,check)
         if(index === slides.length){
             setIndex(0)
             setItem(slides[0])
