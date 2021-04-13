@@ -3,17 +3,24 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 .slideshow-container {
   position: relative;
-  background:whitesmoke;
-  height: 210px;
+  background:rgb(250,250,250);
+  height: 230px;
 }
 
 .mySlides {
+  position: relative;
   display: block;
   padding: 80px;
   text-align: center;
   opacity: 1;  
-  
 }
+
+.logo{
+  padding-top: 93px;
+  text-align: center;
+  position: relative;
+}
+
 .fade {
   animation: fade-in-keyframes 1s;
 }
@@ -22,13 +29,7 @@ body {font-family: Verdana, sans-serif; margin:0}
   to {opacity: 1}
 }
 
-.changeSize{
-  animation: size-in-keyframes 1s;
-}
-@keyframes size-in-keyframes {
-  from { padding-bottom: 0px;}
-  to { padding-bottom: 30px;}
-}
+
 .prev, .next {
   cursor: pointer;
   position: relative;
@@ -55,7 +56,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 .dot-container {
     text-align: center;
     padding: 60px;
-    background: whitesmoke;
+    background: rgb(250,250,250);;
 }
 
 q {font-style: italic;}
@@ -63,4 +64,81 @@ q {font-style: italic;}
 .author {
     padding-top: 40px;
     color: black;
+}
+
+@media(min-width:0px) {
+  
+  .slideshow-container {
+    height: 300px;
+  }
+  .logo{
+    padding-top: 40px;
+  }
+  .mySlides{
+    padding-top: 40px;
+  }
+  .message{
+    font-size: 15px;
+  }
+  .author{
+    padding-top: 30px;
+    font-size: 15px;
+  }
+  .num{
+    left: 0%;
+  }
+  .prev, .next{
+    left: 0%;
+  }
+  
+}
+
+@media(min-width:500px) {
+  .slideshow-container {
+    height: 250px;
+  }
+  .logo{
+    padding-top: 40px;
+  }
+  .message{
+    font-size: 16px;
+  }
+  .author{
+    padding-top: 30px;
+    font-size: 16px;
+  }
+  .num{
+    left: 35%;
+  }
+  .prev, .next{
+    left: 35%;
+  }
+}
+
+@media(min-width: 960px){ /* md i lg*/
+  .mySlides{
+    right: 40%;
+  }
+  .slideshow-container {
+    height: 230px;
+  }
+  .logo{
+    padding-top: 112px;
+  }
+  .mySlides{
+    padding-top: 100px;
+  }
+  .message{
+    font-size: 17px;
+  }
+  .author{
+    padding-top: 30px;
+    font-size: 17px;
+  }
+  .num{
+    left: 35%;
+  }
+  .prev, .next{
+    left: 35%;
+  }
 }

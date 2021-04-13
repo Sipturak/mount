@@ -8,7 +8,8 @@ import "aos/dist/aos.css"
 import CarouselComponentCss from '../carousel/CarouselComponentCss.css'
 const useStyles = makeStyles({
     layoutCards: {
-        paddingBottom: 30
+        paddingBottom: 30,
+        paddingLeft: 30
     }
 })
 function CardComponent() {
