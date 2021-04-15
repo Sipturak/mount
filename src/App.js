@@ -16,6 +16,7 @@ import HomeComponent from './components/home/HomeComponent'
 import CardViewCss from './components/cards/CardViewCss.css'
 import InfoComponentCss from './components/header/InfoComponentCss.css'
 import footer from './components/footer/footer.css'
+
 library.add(faGripLinesVertical)
 
 

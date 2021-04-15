@@ -1,0 +1,21 @@
+.heading-blog {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Fjalla One",sans-serif;
+    letter-spacing: 4px;
+    font-size: 17px;
+    display: block;
+    line-height: 30px;
+    color: 'white';
+    font-weight: bold;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.experience-items {
+    position: relative;
+    right: 100px;
+}

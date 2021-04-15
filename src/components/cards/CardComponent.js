@@ -41,12 +41,17 @@ function CardComponent() {
     ])
     const classes = useStyles()
     useEffect(() => {
-        Aos.init({duration: 5000, delay: 300})
+        Aos.init({duration: 5000})
         
     }, [])
     return (
         <Grid container>
-            <div data-aos="flip-right" className = "all-cards">
+            <div 
+                data-aos-once='true'
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine" 
+                className = "all-cards">
                 <div className="row justify-content-center">
                     {
                         cards.map(card => {

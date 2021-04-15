@@ -6,6 +6,7 @@ import { HeaderComponent } from '../header/HeaderComponent';
 import {InfoComponent} from '../header/InfoComponent'
 import {FooterComponent} from '../footer/FooterComponent';
 import { SliderComponent } from '../carousel/SliderComponent';
+import { BlogComponent } from '../blog/BlogComponent';
 
 
 const HomeComponent = (props) =>{
@@ -17,8 +18,8 @@ const HomeComponent = (props) =>{
                 <InfoComponent />
                 <CardComponent/>
             </div>
+            <BlogComponent/>
             <SliderComponent />
-            <AboutUsComponent />
             <FooterComponent />
         </div>
     )
