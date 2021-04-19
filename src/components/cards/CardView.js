@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import {motion} from 'framer-motion'
+import CardViewCss from '../cards/CardViewCss.css'
 
 
 
@@ -16,11 +17,9 @@ export const CardView = ({imgUrl,text,title}) => {
         setInitialText(true)
     }
     return (
-        <div className="col-sm-4 col-xs-6">
+        <div className="col-xs-6 col-sm-6 col-md-6 one-card">
             <motion.div onMouseEnter={() => mouseOver()} onMouseLeave = {() => mouseOut()}
-                whileHover={{backgroundColor: 'rgba(0,0,0,0.9)', backgroundBlendMode: 'darken'}}
-                transition={{type: 'tween',duration: 0}}
-                className="card text-center shadow" style={{width: '17rem',height: '30rem',backgroundImage:`url(${imgUrl})`}}>
+                className="card text-center shadow card-size" style={{backgroundImage:`url(${imgUrl})`}}>
                 <div className="inner">
                     {
                         initialText ? <> 
@@ -31,7 +30,7 @@ export const CardView = ({imgUrl,text,title}) => {
                          <p className="card-desc-second"> {text}</p>
                          </>
                     }
-                    {hovered ? <button className="btn btn-success" style={{position: 'relative',top:380,right:55}}>More</button> : null}
+                    {hovered ? <button className="btn btn-success card-btn">More</button> : null}
                 </div>
             </motion.div>
         </div>

@@ -6,17 +6,19 @@ import { HeaderComponent } from '../header/HeaderComponent';
 import {InfoComponent} from '../header/InfoComponent'
 import {FooterComponent} from '../footer/FooterComponent';
 import { SliderComponent } from '../carousel/SliderComponent';
+import { VideoComponent } from '../header/VideoComponent';
+import HomeCss from '../home/HomeCss.css'
 
 
 const HomeComponent = (props) =>{
     return (
-        <div style={{backgroundColor: 'white'}}>
-            <HeaderComponent />
+        <div className="home">
+            <VideoComponent />
             <br/>
             <div className = "container px-0">
                 <InfoComponent />
-                <CardComponent/>
             </div>
+            <CardComponent/>
             <SliderComponent />
             <AboutUsComponent />
             <FooterComponent />

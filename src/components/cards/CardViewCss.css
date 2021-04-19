@@ -38,4 +38,31 @@
     transform: translate(-50%, -50%);
     color: white;
   }
+
+  .all-cards{
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .card-size{
+    width: 18rem;
+    height: 30rem;
+  }
+
+  .one-card{
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .card-btn{
+    position: absolute;
+    top: 380px;
+    right: 150px;
+  }
+
+  .card:hover{
+    background-color: rgba(0,0,0,0.9);
+    background-blend-mode: darken;
+  }
   
