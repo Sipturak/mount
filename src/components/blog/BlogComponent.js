@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 export const BlogComponent = () =>{
     useEffect(() => {
-        Aos.init()
+        Aos.init({duration:3000})
         
     }, [])
     return (
