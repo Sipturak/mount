@@ -39,9 +39,10 @@ const useStyles = makeStyles((theme) => ({
     navigationlinksTitle: {
         padding: theme.spacing(10, 22, 10, 5),
         fontFamily: 'Tjofsons', 
-        fontSize: 32
+        fontSize: 32,
+
     },
-    appBarSolid: {
+    appBarTransparent: {
         transition: 'all 0.3s ease',
         backgroundColor: 'rgba(255, 255, 255 ,0.95)',
         '&:hover':{
@@ -49,10 +50,16 @@ const useStyles = makeStyles((theme) => ({
         },
         height: 100,
     },
-    appBarTransparent: {
+    appBarSolid: {
         transition: 'all 0.3s ease',
-        backgroundColor: 'rgb(255, 255, 255)',
-        height: 100,  
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        height: 100,
+    },
+    pimpec: {
+        color: 'rgb(255, 255, 255)',
+    },
+    pimpek: {
+        color: 'secondary',
     }
 }));
 
@@ -63,16 +70,21 @@ function NavComponent() {
     
     const classes = useStyles();
 
-    const [navBackground, setNavBackground] = useState('appBarTransparent')
+    const [navColor ,setNavColor] = useState('pimpec')
+    const [navBackground, setNavBackground] = useState('appBarSolid')
     const navRef = React.useRef()
+    const colorRef = React.useRef()
     navRef.current = navBackground
+    colorRef.current = navColor
     useEffect(() => {
         const handleScroll = () => {
             const show = window.scrollY > 50
             if (show) {
-                setNavBackground('appBarSolid')
-            } else {
                 setNavBackground('appBarTransparent')
+                setNavColor('pimpec')
+            } else {
+                setNavBackground('appBarSolid')
+                setNavColor('pimpek')
             }
         }
         document.addEventListener('scroll', handleScroll)
@@ -86,7 +98,7 @@ function NavComponent() {
             <AppBar className={classes[navRef.current]} position='fixed'>
                 <MaterialToolbar className={classes.toolbarAlignment}>
                     <Typography className={classes.navigationlinksTitle} color='secondary'>Mountain Climbing Society</Typography>
-                    <Link className={classes.navigationlinks} href='/' color='secondary'>Home</Link>
+                    <Link className={classes.navigationlinks} href='/' color='secondary' >Home</Link>
                     <FontAwesomeIcon className={classes.fontAwesomeS} style={{fontSize: 30, color: 'green'}} icon="grip-lines-vertical"></FontAwesomeIcon>
                     <Link className={classes.navigationlinks} href='/about' color='secondary'>About</Link>
                     <FontAwesomeIcon className={classes.fontAwesomeS} style={{fontSize: 30, color: 'green'}} icon="grip-lines-vertical"></FontAwesomeIcon>

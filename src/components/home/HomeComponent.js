@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import AboutUsComponent from '../about_us/AboutUsComponent';
 import { HeaderComponent } from '../header/HeaderComponent';
 import {InfoComponent} from '../header/InfoComponent'
+import DonateComponent from '../donate/Donate';
 
 const HomeComponent = (props) =>{
     return (
@@ -16,6 +17,7 @@ const HomeComponent = (props) =>{
                 <CardComponent/>
             </div>
             <AboutUsComponent />
+            <DonateComponent />
         </div>
     )
 }
