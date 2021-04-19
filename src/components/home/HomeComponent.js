@@ -8,6 +8,7 @@ import {FooterComponent} from '../footer/FooterComponent';
 import { SliderComponent } from '../carousel/SliderComponent';
 import { VideoComponent } from '../header/VideoComponent';
 import HomeCss from '../home/HomeCss.css'
+import { BlogComponent } from '../blog/BlogComponent';
 
 
 const HomeComponent = (props) =>{
@@ -19,8 +20,8 @@ const HomeComponent = (props) =>{
                 <InfoComponent />
             </div>
             <CardComponent/>
+            <BlogComponent/>
             <SliderComponent />
-            <AboutUsComponent />
             <FooterComponent />
         </div>
     )

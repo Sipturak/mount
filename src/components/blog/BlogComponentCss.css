@@ -1,0 +1,85 @@
+.heading-blog {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Fjalla One",sans-serif;
+    letter-spacing: 4px;
+    font-size: 17px;
+    display: block;
+    line-height: 30px;
+    color: 'white';
+    font-weight: bold;
+}
+
+.section-right{
+    margin-right: 50px;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.hero-image {
+    height: 650px;
+    background-blend-mode: darken;
+    background-color: 'rgb(2 2 2 / 35%);';
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.experience-items {
+    position: relative;
+    right: 100px;
+}
+
+.heading-text {
+
+    color: #ece4cb;
+    text-align: justify;
+    font-size: 14px;
+}
+
+
+@media (min-width: 576px) { 
+    .heading-text{
+        font-size: 10px;
+    }
+
+    .section-right{
+        margin-top: 50px;
+    }
+ }
+
+ @media (max-width: 575.98px) { 
+    .heading-text{
+        font-size: 10px;
+    }
+
+    .section-right{
+        margin-top: 50px;
+        margin-right: 150px;
+    }
+  }
+
+
+
+@media (min-width: 768px) { 
+
+    .heading-text{
+        font-size: 11px;
+    }
+
+    .section-right{
+        margin-top: 100px;
+    }
+
+}
+
+
+@media (min-width: 992px) { 
+    .heading-text{
+        font-size: 14px;
+    }
+
+
+ }
