@@ -15,6 +15,11 @@ body {font-family: Verdana, sans-serif; margin:0}
   opacity: 1;  
 }
 
+.slider-body{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .logo{
   padding-top: 93px;
   text-align: center;

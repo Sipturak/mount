@@ -67,7 +67,7 @@ export const SliderComponent = () => {
     }, [])
    
     return (
-        <div data-aos="fade-up" style = {{marginTop: 100}} >
+        <div data-aos="fade-up" className="slider-body">
             <div className="slideshow-container">
                 <Grid container className="move">
                     <Grid item xs={12} sm={12} md={6} lg={6} >
