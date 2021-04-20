@@ -1,1 +1,4 @@
 node_modules
+public/header_video.MP4
+package-lock.json
+*.MP4

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import './NavComponent.css'
+import SideDrawer from './SideDrawer'
 import { makeStyles } from '@material-ui/core/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
@@ -17,17 +18,7 @@ const useStyles = makeStyles((theme) => ({
     toolbarAlignment: {
         textAlign: 'center'
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-        color: 'black'
-    },
-    title: {
-        flexGrow: 1,
-        color: 'black'
-    },
-    fontAwesomeS: {
-        marginRight: theme.spacing(8)
-    },
+
     navigationlinks: {
         marginRight: theme.spacing(8),
         fontFamily: 'Tjofsons',
@@ -37,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     navigationlinksTitle: {
-        padding: theme.spacing(10, 22, 10, 5),
         fontFamily: 'Tjofsons', 
         fontSize: 32
     },
@@ -47,15 +37,19 @@ const useStyles = makeStyles((theme) => ({
         '&:hover':{
             backgroundColor: 'rgb(255, 255, 255)',
         },
-        height: 100,
     },
     appBarTransparent: {
         transition: 'all 0.3s ease',
-        backgroundColor: 'rgb(255, 255, 255)',
-        height: 100,  
-    }
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+    },
 }));
-
+const navLinks = [
+    { title: `Home`, path: `/` },
+    { title: `About Me`, path: `/about` },
+    { title: `Miskolina`, path: `/about` },
+    { title: `Nemanjica`, path: `/about` },
+    { title: `Tjofson`, path: `/about` },
+]
 
 
 
@@ -63,16 +57,16 @@ function NavComponent() {
     
     const classes = useStyles();
 
-    const [navBackground, setNavBackground] = useState('appBarTransparent')
+    const [navBackground, setNavBackground] = useState('appBarSolid')
     const navRef = React.useRef()
     navRef.current = navBackground
     useEffect(() => {
         const handleScroll = () => {
             const show = window.scrollY > 50
             if (show) {
-                setNavBackground('appBarSolid')
-            } else {
                 setNavBackground('appBarTransparent')
+            } else {
+                setNavBackground('appBarSolid')
             }
         }
         document.addEventListener('scroll', handleScroll)
@@ -85,12 +79,8 @@ function NavComponent() {
         <>
             <AppBar className={classes[navRef.current]} position='fixed'>
                 <MaterialToolbar className={classes.toolbarAlignment}>
-                    <Typography className={classes.navigationlinksTitle} color='secondary'>Mountain Climbing Society</Typography>
-                    <Link className={classes.navigationlinks} href='/' color='secondary'>Home</Link>
-                    <FontAwesomeIcon className={classes.fontAwesomeS} style={{fontSize: 30, color: 'green'}} icon="grip-lines-vertical"></FontAwesomeIcon>
-                    <Link className={classes.navigationlinks} href='/about' color='secondary'>About</Link>
-                    <FontAwesomeIcon className={classes.fontAwesomeS} style={{fontSize: 30, color: 'green'}} icon="grip-lines-vertical"></FontAwesomeIcon>
-                    <Link className={classes.navigationlinks} href='/albums' color='secondary'>Albums</Link>
+                    <IconButton edge="start" color="secondary"  />
+                    <SideDrawer navLinks={navLinks}/>
                 </MaterialToolbar>
             </AppBar>
         </>

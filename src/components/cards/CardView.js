@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import {motion} from 'framer-motion'
-import CardViewCss from '../cards/CardViewCss.css'
+import '../cards/CardViewCss.css'
 
 
 

@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-
-import css_cards from './CSS/css_cards.css'
-import aboutUs from './CSS/aboutUs.css'
-
 import {BrowserRouter} from 'react-router-dom'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core'
 import { green } from '@material-ui/core/colors'

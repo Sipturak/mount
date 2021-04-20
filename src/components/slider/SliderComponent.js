@@ -4,6 +4,7 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid'
+import '../slider/CarouselComponentCss.css'
 
 export const SliderComponent = () => {
     const [index, setIndex] = useState(0)

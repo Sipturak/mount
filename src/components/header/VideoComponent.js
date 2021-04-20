@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoComponentCss from '../header/VideoComponentCss.css'
+import '../header/VideoComponentCss.css'
 export const VideoComponent = () => {
     return (
         <div className="body-div">

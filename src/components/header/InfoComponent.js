@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react'
+import './InfoComponentCss.css'
 
 
 export const InfoComponent = () => {
