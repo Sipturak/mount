@@ -4,7 +4,7 @@ import './InfoComponentCss.css'
 
 export const InfoComponent = () => {
     return (
-        <div className="info">
+        <div className="info" id="info">
             <p className="main-title">Serbia is waiting for you to explore it.
                                         In your own way.Soon.
             </p>

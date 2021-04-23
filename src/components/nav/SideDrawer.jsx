@@ -4,15 +4,26 @@ import { Menu } from "@material-ui/icons"
 import { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
+import './NavComponent.css'
+import { Link, useLocation } from "react-router-dom"
 
 const useStyles = makeStyles({
     list: {
       width: 250,
     },
+    alignment: {
+      textAlign: 'center',
+    },
     linkText: {
-      textDecoration: `none`,
-      textTransform: `uppercase`,
-      color: `black`,
+      fontFamily: 'Roboto',
+      fontSize: 28,
+      color: 'rgb(34, 139, 34)',
+      '&:hover':{
+          color: 'rgb(80, 255, 80)',
+      },
+      textAlign: 'center',
+      textDecoration: 'none',
+      textTransform: 'uppercase'
     },
   })
 const SideDrawer = ({navLinks}) => {
@@ -35,11 +46,11 @@ const SideDrawer = ({navLinks}) => {
     >
       <List component="nav">
         {navLinks.map(({ title, path }) => (
-          <a href={path} key={title} className={classes.linkText}>
+          <Link to={path} key={title} className={classes.linkText}>
             <ListItem button>
-              <ListItemText primary={title} />
+              <ListItemText className={classes.alignment} primary={title} />
             </ListItem>
-          </a>
+          </Link>
         ))}
       </List>
     </div>

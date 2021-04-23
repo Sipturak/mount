@@ -15,17 +15,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center'
     },
-    toolbarAlignment: {
-        textAlign: 'center'
-    },
-
     navigationlinks: {
-        marginRight: theme.spacing(8),
         fontFamily: 'Tjofsons',
         fontSize: 28,
         '&:hover':{
             color: 'rgb(80, 255, 80)',
         },
+        textAlign: 'right',
+        marginRight: 'auto'
     },
     navigationlinksTitle: {
         fontFamily: 'Tjofsons', 
@@ -45,10 +42,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 const navLinks = [
     { title: `Home`, path: `/` },
-    { title: `About Me`, path: `/about` },
-    { title: `Miskolina`, path: `/about` },
-    { title: `Nemanjica`, path: `/about` },
-    { title: `Tjofson`, path: `/about` },
+    { title: `Info`, path: `/#info` },
+    { title: `Albums`, path: `/#albums` },
+    { title: `Impressions`, path: `/#impressions` },
+    { title: `Jedan`, path: `/asd` },
 ]
 
 
@@ -81,6 +78,9 @@ function NavComponent() {
                 <MaterialToolbar className={classes.toolbarAlignment}>
                     <IconButton edge="start" color="secondary"  />
                     <SideDrawer navLinks={navLinks}/>
+                    <Typography className={classes.navigationlinks} color="secondary">
+                        brembo
+                    </Typography>
                 </MaterialToolbar>
             </AppBar>
         </>

@@ -48,7 +48,8 @@ function CardComponent() {
                 data-aos="fade-right"
                 data-aos-offset="200"
                 data-aos-easing="ease-in-sine" 
-                className = "all-cards">
+                className = "all-cards"
+                id="albums">
                 <div className="row justify-content-center">
                     {
                         cards.map(card => {
