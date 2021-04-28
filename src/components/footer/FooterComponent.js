@@ -5,29 +5,23 @@ import footer from '../footer/Footer.css'
 
 export const FooterComponent = () => {
     return (   
-        <div className="foo">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-4 foo-text text-center">
-                            <h3 className="foo-h3">Location</h3>
-                            <p>Serbia,Belgrade<br/>Takovska 11</p>
+        <section className="foo">
+                <div >
+                    <div>
+                        <div className="thumb">
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="2.5rem" height="2.5rem" fill="currentColor" 
+                                class="bi bi-pin-angle-fill" viewBox="0 0 9 16">
+                                <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z"/>
+                            </svg>
                         </div>
-                        <div className="col-md-4 foo-text text-center">
-                            <h3 className="foo-h3">Around the Web</h3>
-                            <ul className="list-inline foo-img">
-                                <img src="/images/facebook.svg" className="foo-icon" alt=""/>
-                                <img src="/images/twitter.svg" className="foo-icon" alt=""/>
-                                <img src="/images/instagram.svg" className="foo-icon" alt=""/>
-                                <img src="/images/google.svg" className="foo-icon" alt=""/>
-                            </ul>
-                        </div>
-                        <div className="col-md-4 foo-text text-center">
-                            <h3 className="foo-h3">About</h3>
-                            <p>This is a sample page created to demonstrate power.</p>
+                        <div className="foo-content">
+                            <p>© 2021 Mountain Hiking. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
-        </div>
+        </section>
     )
 }
 
