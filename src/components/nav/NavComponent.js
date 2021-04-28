@@ -45,7 +45,7 @@ const navLinks = [
     { title: `Info`, path: `/#info` },
     { title: `Albums`, path: `/#albums` },
     { title: `Impressions`, path: `/#impressions` },
-    { title: `Jedan`, path: `/asd` },
+    { title: `Donate`, path: `/donations` },
 ]
 
 
@@ -79,7 +79,7 @@ function NavComponent() {
                     <IconButton edge="start" color="secondary"  />
                     <SideDrawer navLinks={navLinks}/>
                     <Typography className={classes.navigationlinks} color="secondary">
-                        brembo
+                        Mountain Climbing Kraljevo
                     </Typography>
                 </MaterialToolbar>
             </AppBar>

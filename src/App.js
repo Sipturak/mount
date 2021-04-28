@@ -11,6 +11,7 @@ import { InfoComponent } from './components/header/InfoComponent';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {faGripLinesVertical} from '@fortawesome/free-solid-svg-icons'
+import DonateComponent from './components/donate/DonateComponent';
 
 library.add(faGripLinesVertical)
 
@@ -37,7 +38,7 @@ function App() {
       <NavComponent/>
         <Switch>
           <Route exact path="/" component={HomeComponent}/>
-          <Route exact path="/asd" component={InfoComponent}/>
+          <Route exact path="/donations" component={DonateComponent}/>
         </Switch>
     </React.Fragment>
   );
