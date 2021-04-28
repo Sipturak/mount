@@ -5,6 +5,7 @@ import {InfoComponent} from '../header/InfoComponent'
 import {FooterComponent} from '../footer/FooterComponent';
 import { SliderComponent } from '../slider/SliderComponent';
 import { VideoComponent } from '../header/VideoComponent';
+import {BlogComponent} from '../blog/BlogComponent'
 
 import '../home/HomeCss.css'
 
@@ -17,6 +18,7 @@ const HomeComponent = (props) =>{
                 <InfoComponent />
             </div>
             <CardComponent/>
+            <BlogComponent/>
             <SliderComponent />
             <FooterComponent />
         </div>

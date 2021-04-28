@@ -1,0 +1,21 @@
+.g-letter {
+    color: #8da793;
+    font-family: 'Gascogne';
+    font-size: 92.5px;
+    float: left;
+    margin-right: 10px;
+}
+
+.container-split{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+p{
+    text-align: justify;
+}
+
+.blog-text {
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.25rem;
+}
