@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { CardView } from './CardView'
 import Grid from '@material-ui/core/Grid'
@@ -7,35 +7,20 @@ import "aos/dist/aos.css"
 
 import img1 from '../../images/swing.jpg'
 import '../slider/CarouselComponentCss.css'
+import axios from 'axios'
 
-function CardComponent() {
+function CardComponent(){
 
-    const [cards, setCards] = useState([{
-        id: 1,
-        imgUrl: img1,
-        title:"Special title treatment", 
-        text:"With supporting text below as a."
-    },
-    {
-        id: 2,
-        imgUrl: img1,
-        title:"Special title treatment",
-        text:"With supporting text below as a."
-    },
-    {   
-        id: 3,
-        imgUrl: img1, 
-        title:"Special title treatment", 
-        text:"With supporting text below as a."
-
-    },{   
-        id: 4,
-        imgUrl: img1, 
-        title:"Special title treatment", 
-        text:"With supporting text below as a."
+    state = {
+        images: []
     }
-
-    ])
+    useEffect(() => {
+        setAppState({loading: true})
+        axios.get('http://localhost:8080/image/three').then(res => {
+            const images = res.data;
+            setAppState({loading: false, res: images})
+        })
+    }, [setAppState])
 
     useEffect(() => {
         Aos.init({duration: 5000})
@@ -52,10 +37,10 @@ function CardComponent() {
                 id="albums">
                 <div className="row justify-content-center">
                     {
-                        cards.map(card => {
-                        return  <Grid item key={card.id}>
-                            <CardView imgUrl={card.imgUrl} title={card.title} text={card.text} />
-                        </Grid>
+                        this.state.images.map(images => {
+                        return  <Grid item key={images.id}>
+                                    <CardView imgUrl={images} />
+                                </Grid>
                         })
                     }
                 </div>
